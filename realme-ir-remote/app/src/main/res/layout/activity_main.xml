@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1a1a2e">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="REALME TV REMOTE"
+            android:textColor="#e94560"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Checking IR..."
+            android:textColor="#aaaaaa"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:paddingBottom="12dp"/>
+
+        <!-- Power / Mute / Source -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="8dp">
+
+            <Button android:id="@+id/btn_power"
+                style="@style/RemoteBtn.Red"
+                android:text="⏻\nPOWER"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"/>
+
+            <Button android:id="@+id/btn_mute"
+                style="@style/RemoteBtn"
+                android:text="🔇\nMUTE"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"/>
+
+            <Button android:id="@+id/btn_source"
+                style="@style/RemoteBtn"
+                android:text="⤵\nSOURCE"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"/>
+
+            <Button android:id="@+id/btn_info"
+                style="@style/RemoteBtn"
+                android:text="ℹ\nINFO"
+                android:layout_width="0dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <!-- Volume + Channel -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1"
+                android:orientation="vertical" android:layout_marginEnd="8dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="VOLUME" android:textColor="#888" android:gravity="center" android:textSize="11sp"/>
+                <Button android:id="@+id/btn_vol_up" style="@style/RemoteBtn.Blue"
+                    android:text="+" android:layout_marginBottom="4dp"/>
+                <Button android:id="@+id/btn_vol_down" style="@style/RemoteBtn.Blue"
+                    android:text="−"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="CHANNEL" android:textColor="#888" android:gravity="center" android:textSize="11sp"/>
+                <Button android:id="@+id/btn_ch_up" style="@style/RemoteBtn.Blue"
+                    android:text="+" android:layout_marginBottom="4dp"/>
+                <Button android:id="@+id/btn_ch_down" style="@style/RemoteBtn.Blue"
+                    android:text="−"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Navigation D-Pad -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NAVIGATION"
+            android:textColor="#888"
+            android:textSize="11sp"
+            android:gravity="center"
+            android:layout_marginBottom="4dp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center">
+            <Button android:id="@+id/btn_up" style="@style/RemoteBtn.Nav" android:text="▲"
+                android:layout_marginStart="56dp"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center" android:layout_marginTop="4dp">
+            <Button android:id="@+id/btn_left" style="@style/RemoteBtn.Nav" android:text="◄" android:layout_marginEnd="4dp"/>
+            <Button android:id="@+id/btn_ok" style="@style/RemoteBtn.Red"
+                android:text="OK" android:layout_width="64dp" android:layout_marginEnd="4dp"/>
+            <Button android:id="@+id/btn_right" style="@style/RemoteBtn.Nav" android:text="►"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center" android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp">
+            <Button android:id="@+id/btn_down" style="@style/RemoteBtn.Nav" android:text="▼"
+                android:layout_marginStart="56dp"/>
+        </LinearLayout>
+
+        <!-- Home / Back / Menu -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center" android:layout_marginBottom="8dp">
+            <Button android:id="@+id/btn_home" style="@style/RemoteBtn"
+                android:text="⌂\nHOME" android:layout_width="0dp" android:layout_weight="1" android:layout_marginEnd="4dp"/>
+            <Button android:id="@+id/btn_back" style="@style/RemoteBtn"
+                android:text="↩\nBACK" android:layout_width="0dp" android:layout_weight="1" android:layout_marginEnd="4dp"/>
+            <Button android:id="@+id/btn_menu" style="@style/RemoteBtn"
+                android:text="☰\nMENU" android:layout_width="0dp" android:layout_weight="1"/>
+        </LinearLayout>
+
+        <!-- Media controls -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="MEDIA" android:textColor="#888" android:textSize="11sp"
+            android:gravity="center" android:layout_marginBottom="4dp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center" android:layout_marginBottom="8dp">
+            <Button android:id="@+id/btn_rew" style="@style/RemoteBtn"
+                android:text="⏮" android:layout_width="0dp" android:layout_weight="1" android:layout_marginEnd="4dp"/>
+            <Button android:id="@+id/btn_play_pause" style="@style/RemoteBtn.Blue"
+                android:text="⏯" android:layout_width="0dp" android:layout_weight="1" android:layout_marginEnd="4dp"/>
+            <Button android:id="@+id/btn_ff" style="@style/RemoteBtn"
+                android:text="⏭" android:layout_width="0dp" android:layout_weight="1"/>
+        </LinearLayout>
+
+        <!-- Number pad -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="NUMBERS" android:textColor="#888" android:textSize="11sp"
+            android:gravity="center" android:layout_marginBottom="4dp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center" android:layout_marginBottom="4dp">
+            <Button android:id="@+id/btn_1" style="@style/RemoteBtn.Num" android:text="1" android:layout_marginEnd="4dp"/>
+            <Button android:id="@+id/btn_2" style="@style/RemoteBtn.Num" android:text="2" android:layout_marginEnd="4dp"/>
+            <Button android:id="@+id/btn_3" style="@style/RemoteBtn.Num" android:text="3"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center" android:layout_marginBottom="4dp">
+            <Button android:id="@+id/btn_4" style="@style/RemoteBtn.Num" android:text="4" android:layout_marginEnd="4dp"/>
+            <Button android:id="@+id/btn_5" style="@style/RemoteBtn.Num" android:text="5" android:layout_marginEnd="4dp"/>
+            <Button android:id="@+id/btn_6" style="@style/RemoteBtn.Num" android:text="6"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center" android:layout_marginBottom="4dp">
+            <Button android:id="@+id/btn_7" style="@style/RemoteBtn.Num" android:text="7" android:layout_marginEnd="4dp"/>
+            <Button android:id="@+id/btn_8" style="@style/RemoteBtn.Num" android:text="8" android:layout_marginEnd="4dp"/>
+            <Button android:id="@+id/btn_9" style="@style/RemoteBtn.Num" android:text="9"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center" android:layout_marginBottom="8dp">
+            <Button android:id="@+id/btn_0" style="@style/RemoteBtn.Num" android:text="0"/>
+        </LinearLayout>
+
+        <!-- Color buttons -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center" android:layout_marginBottom="12dp">
+            <Button android:id="@+id/btn_red" style="@style/RemoteBtn"
+                android:backgroundTint="#cc2222"
+                android:layout_width="0dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text=" "/>
+            <Button android:id="@+id/btn_green" style="@style/RemoteBtn"
+                android:backgroundTint="#22aa22"
+                android:layout_width="0dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text=" "/>
+            <Button android:id="@+id/btn_yellow" style="@style/RemoteBtn"
+                android:backgroundTint="#ccaa00"
+                android:layout_width="0dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text=" "/>
+            <Button android:id="@+id/btn_blue" style="@style/RemoteBtn"
+                android:backgroundTint="#2244cc"
+                android:layout_width="0dp" android:layout_weight="1" android:text=" "/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
