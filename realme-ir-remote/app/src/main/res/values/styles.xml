@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.RealmeRemote" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#e94560</item>
+        <item name="colorPrimaryVariant">#c73652</item>
+        <item name="colorOnPrimary">#ffffff</item>
+        <item name="android:windowBackground">#1a1a2e</item>
+    </style>
+
+    <!-- Base button style -->
+    <style name="RemoteBtn" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="backgroundTint">#16213e</item>
+        <item name="android:padding">4dp</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:lines">2</item>
+    </style>
+
+    <style name="RemoteBtn.Red">
+        <item name="backgroundTint">#e94560</item>
+    </style>
+
+    <style name="RemoteBtn.Blue">
+        <item name="backgroundTint">#0f3460</item>
+    </style>
+
+    <style name="RemoteBtn.Nav">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="backgroundTint">#0f3460</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="RemoteBtn.Num">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="backgroundTint">#16213e</item>
+    </style>
+
+</resources>
